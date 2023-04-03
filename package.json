@@ -1,0 +1,23 @@
+{
+  "name": "kanban-app-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "db:create": "psql -U kanban -d kanban -f data/create_tables.sql",
+    "db:seed": "psql -U kanban -d kanban -f data/seed_database.sql",
+    "db:reset": "npm run db:create && npm run db:seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.10.0",
+    "sequelize": "^6.29.3"
+  }
+}
